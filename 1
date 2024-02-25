@@ -1,0 +1,13 @@
+import pandas as pd
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
+scraper = pd.read_html("https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States")
+
+for idx, table in enumerate(scraper):
+    print("***********************************************************")
+    print(idx)
+    print(table)
+ 
+    
+   scraper[0]
